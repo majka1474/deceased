@@ -31,10 +31,9 @@
     } catch(PDOException $e) {
       echo 'DB接続エラー: ' . $e->getMessage();
     }
+    header('Location index.php');
   ?>
 </pre>
-<!-- indexに戻る(登録したやつを表示させる) -->
-<a href="index.php">ホームへ</a>
 </main>
 </body>    
 </html>
