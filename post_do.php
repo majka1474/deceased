@@ -31,9 +31,9 @@
     } catch(PDOException $e) {
       echo 'DB接続エラー: ' . $e->getMessage();
     }
-    header('Location index.php');
   ?>
 </pre>
+<a href="index.php">ホームへ</a>
 </main>
 </body>    
 </html>
