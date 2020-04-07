@@ -36,7 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </header>
 
 <main>
-<h2>LIST</h2>
+<h2><a href="index.php"><font color="#000000">LIST</font></a></h2>
+
 <form action='' method='post'>
     <label>
         <input type='text' name='name'>
@@ -52,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php } else { ?>
         <ol>
             <?php foreach ($result as &$value) { ?>
-                <li><?php echo htmlspecialchars($value['from_japan'], ENT_QUOTES, 'UTF-8') . " : " . htmlspecialchars($value['name'], ENT_QUOTES, 'UTF-8') ?></li>
+                <li><?php echo htmlspecialchars($value['from_japan'], ENT_QUOTES, 'UTF-8') . " : " . htmlspecialchars($value['name'], ENT_QUOTES, 'UTF-8') . "さん" .  "   " . $value['age'] . "歳"; ?></li>
             <?php } ?>
         </ol>
     <?php } ?>

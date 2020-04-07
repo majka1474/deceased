@@ -28,12 +28,12 @@
       $statement->bindParam(3, $_POST['age']);
       $statement->execute();
       echo '登録されました';
+      header('Location: index.php');
     } catch(PDOException $e) {
       echo 'DB接続エラー: ' . $e->getMessage();
     }
   ?>
 </pre>
-<a href="index.php">ホームへ</a>
 </main>
 </body>    
 </html>
